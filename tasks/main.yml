@@ -1,12 +1,6 @@
 - name: add PPA
   sudo: true
   apt_repository: repo=ppa:gophers/go
-  register: result
-
-- name: apt-get update
-  sudo: true
-  apt: update_cache=yes
-  when: result | changed
 
 - name: install package
   sudo: true
